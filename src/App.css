@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -15,7 +19,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,5 +37,69 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.profile{
+  transition: all .2s;
+  cursor: pointer;
+}
+.profile:hover{
+  background-color: rgba(255,255,255,0.21) !important;
+}
+
+.pointer{
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.pointer:hover{
+  filter:brightness(.7)
+}
+::-webkit-scrollbar {
+  width: 4px; /* Width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #313131; /* Color of the tracker */
+  border-radius: 6px; /* Round the corners of the tracker */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Background color of the scrollbar track */
+}
+
+.sendMessage{
+  color: rgb(138, 144, 156);
+  animation: blinking 2s infinite linear;
+  
+}
+
+@keyframes blinking {
+  0%{
+  color: rgb(138, 144, 156);
+  }
+  50%{
+    color: rgba(107, 114, 128, .5);
+    }
+    100%{
+      color: rgb(138, 144, 156);
+     }
+}
+
+.inputBox{
+  width: 80%;
+  max-width: 800px;
+  left: 0;
+  bottom:0;
+}
+.container{
+  height: calc(100% - 64px);
+}
+
+@media screen and (max-width: 900px) {
+  .homeScreen{
+    padding: 0 4px;
   }
 }
